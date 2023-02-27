@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="relative w-full h-full bg-Almost-White mm:flex mm:flex-col">
+      <div class="flex justify-center w-full items-center py-6">
+        <div class="w-[95%] flex justify-between flex-row border-white border">
+          <div class="relative flex flex-row items-center space-x-16">
+            <img src="./images/logo.svg" alt="logo" />
+            <ul
+              class="flex flex-row gap-10 text-lg text-Medium-Gray font-epilog font-[500] md:text-sm mm:hidden"
+            >
+              <li
+                onclick="openfeatures()"
+                class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+              >
+                Features
+                <img
+                  id="featuresImg"
+                  class="w-fit h-fit"
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                />
+              </li>
+              <li
+                onclick="opencompany()"
+                class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+              >
+                Company
+                <img
+                  id="companyImg"
+                  class="h-fit"
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                />
+              </li>
+              <li class="hover:cursor-pointer hover:text-black">Careers</li>
+              <li class="hover:cursor-pointer hover:text-black">About</li>
+            </ul>
+            <div id="features" class="hidden">
+              <div
+                class="flex justify-center items-center absolute bg-white rounded-xl w-48 h-56 shadow-2xl shadow-Almost-Black bottom-[-490%] left-20 py-4 md:bottom-[-600%]"
+              >
+                <ul
+                  class="h-full flex flex-col items-baseline justify-between text-lg text-Medium-Gray font-epilog font-[500]"
+                >
+                  <li
+                    class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                  >
+                    <img src="./images/icon-todo.svg" alt="" />
+                    Todo List
+                  </li>
+                  <li
+                    class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                  >
+                    <img src="./images/icon-calendar.svg" alt="" />
+                    Calendar
+                  </li>
+                  <li
+                    class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                  >
+                    <img src="./images/icon-reminders.svg" alt="" />
+                    Reminders
+                  </li>
+                  <li
+                    class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                  >
+                    <img src="./images/icon-planning.svg" alt="" />
+                    Planning
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="company" class="hidden">
+              <div
+                class="flex justify-center items-center absolute bg-white rounded-xl w-32 h-36 shadow-2xl shadow-Almost-Black bottom-[-320%] right-64 py-4 md:bottom-[-400%]"
+              >
+                <ul
+                  class="h-full flex flex-col items-baseline justify-between text-lg text-Medium-Gray font-epilog font-[500]"
+                >
+                  <li
+                    class="flex flex-row items-center hover:cursor-pointer hover:text-black"
+                  >
+                    History
+                  </li>
+                  <li
+                    class="flex flex-row items-center hover:cursor-pointer hover:text-black"
+                  >
+                    Our Team
+                  </li>
+
+                  <li
+                    class="flex flex-row items-center hover:cursor-pointer hover:text-black"
+                  >
+                    Blog
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center flex-row">
+            <ul
+              class="flex flex-row gap-10 text-lg text-Medium-Gray font-epilog font-[500] items-center md:text-sm mm:hidden"
+            >
+              <li class="hover:cursor-pointer hover:text-black">Login</li>
+              <li
+                class="border-2 rounded-2xl px-4 py-2 hover:bg-black hover:text-Almost-White hover:cursor-pointer"
+              >
+                Register
+              </li>
+            </ul>
+            <img
+              onclick="expandMenu()"
+              class="mc:hidden"
+              src="./images/icon-menu.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-100 h-screen mm:h-fit flex justify-center items-center mm:py-10"
+      >
+        <div
+          class="w-[80%] h-[70%] mm:h-fit flex flex-row mm:flex-col-reverse mm:gap-10 sm:w-full sm:justify-center sm:items-center"
+        >
+          <div
+            class="w-[50%] flex flex-col justify-between mm:w-full mm:items-center mm:gap-10"
+          >
+            <div class="w-full sm:w-[90%]">
+              <h2
+                class="font-epilog font-[700] text-[100px] break-words leading-tight md:text-[40px] mm:text-center"
+              >
+                Make <br />
+                remote work
+              </h2>
+            </div>
+            <div class="sm:w-[90%]">
+              <p
+                class="font-epilog font-[500] text-xl break-words md:text-sm sm:text-xs mm:text-center"
+              >
+                Get your team in sync, no matter your location. <br />
+                Streamline processes, create team rituals, and<br />
+                watch productivity soar.
+              </p>
+            </div>
+            <div
+              class="sm:w-[90%] sm:flex sm:items-center sm:justify-center sm:flex-col"
+            >
+              <button
+                class="font-epilog font-[700] bg-black px-8 py-4 text-Almost-White rounded-2xl tracking-widest hover:bg-white hover:text-black hover:border-black hover:border-2 md:text-sm md:py-4 md:px-6"
+              >
+                Learn more
+              </button>
+            </div>
+            <div class="w-full sm:w-[90%]">
+              <ul class="flex flex-row justify-between">
+                <li>
+                  <img src="./images/client-audiophile.svg" alt="" />
+                </li>
+                <li><img src="./images/client-databiz.svg" alt="" /></li>
+                <li><img src="./images/client-maker.svg" alt="" /></li>
+                <li><img src="./images/client-meet.svg" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="w-[50%] h-[100%] flex items-end justify-end flex-row mm:w-full mm:justify-center sm:w-full"
+          >
+            <img
+              class="w-auto h-[100%] sm:hidden"
+              src="./images/image-hero-desktop.png"
+              alt=""
+            />
+            <img
+              class="sc:w-full sc:hidden"
+              src="./images/image-hero-mobile.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div id="menuModal" class="hidden">
+        <div
+          class="absolute bg-white top-0 right-0 bottom-0 left-28 flex justify-center items-start py-6"
+        >
+          <div class="w-[80%]">
+            <div class="flex flex-row justify-end mb-10">
+              <img
+                onclick="closeMenu()"
+                src="./images/icon-close-menu.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <ul
+                class="flex flex-col gap-3 font-epilog font-[500] text-Medium-Gray"
+              >
+                <li
+                  onclick="openFeatureModal()"
+                  class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                >
+                  Features
+                  <img
+                    id="FI"
+                    class="w-fit h-fit"
+                    src="./images/icon-arrow-down.svg"
+                    alt=""
+                  />
+                </li>
+                <li id="FM" class="hidden">
+                  <div class="flex justify-center items-center w-100 h-56">
+                    <ul
+                      class="h-full flex flex-col items-baseline justify-between text-m text-Medium-Gray font-epilog font-[500]"
+                    >
+                      <li
+                        class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                      >
+                        <img src="./images/icon-todo.svg" alt="" />
+                        Todo List
+                      </li>
+                      <li
+                        class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                      >
+                        <img src="./images/icon-calendar.svg" alt="" />
+                        Calendar
+                      </li>
+                      <li
+                        class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                      >
+                        <img src="./images/icon-reminders.svg" alt="" />
+                        Reminders
+                      </li>
+                      <li
+                        class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                      >
+                        <img src="./images/icon-planning.svg" alt="" />
+                        Planning
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  onclick="openComapanyModal()"
+                  class="flex flex-row items-center gap-2 hover:cursor-pointer hover:text-black"
+                >
+                  Company
+                  <img
+                    id="companyimg"
+                    class="h-fit"
+                    src="./images/icon-arrow-down.svg"
+                    alt=""
+                  />
+                </li>
+                <li id="companyModal" class="hidden">
+                  <div class="flex justify-center items-center w-100 h-36">
+                    <ul
+                      class="h-full flex flex-col items-baseline justify-between text-m text-Medium-Gray font-epilog font-[500]"
+                    >
+                      <li
+                        class="flex flex-row items-center hover:cursor-pointer hover:text-black"
+                      >
+                        History
+                      </li>
+                      <li
+                        class="flex flex-row items-center hover:cursor-pointer hover:text-black"
+                      >
+                        Our Team
+                      </li>
+
+                      <li
+                        class="flex flex-row items-center hover:cursor-pointer hover:text-black"
+                      >
+                        Blog
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="hover:cursor-pointer hover:text-black">Careers</li>
+                <li class="hover:cursor-pointer hover:text-black">About</li>
+              </ul>
+            </div>
+            <div class="w-full py-8">
+              <ul
+                class="w-full flex flex-col items-center font-epilog font-[500] text-Medium-Gray gap-8"
+              >
+                <li>Login</li>
+                <li class="w-full">
+                  <button
+                    class="w-full py-4 border-2 rounded-xl hover:text-white hover:bg-Almost-Black"
+                  >
+                    Register
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
